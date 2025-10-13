@@ -6,6 +6,10 @@ import Description from "@/components/Description";
 import Pet from "@/components/Pet";
 import Counter from "@/components/Counter";
 import UserForm from "@/components/UserForm";
+import ComponentePai from "@/components/ComponentePai";
+import Children from "@/components/Children";
+import TaskList from "@/components/TaskList";
+
 
 export default function Home() {
   return (
@@ -19,18 +23,56 @@ export default function Home() {
       </Head>
       <main>
         <h1>Hello World! Meu primeiro site em React</h1>
-             <Welcome />
-             <User />
-             {/* Passando props para os componentes */}
-             <Description city = "Registro" age= {18} email="ricardoestevam2704@gmail.com"/>
-             {/* Componente com desestruturação de props */}
-             <Pet name="Rex" breed="Pitbull" age={3}/>
-             <br />
-             <Counter />
-             <br />
-             <UserForm />
+        <Welcome />
+        <User />
+        {/* Passando props para os componentes */}
+        <Description
+          city="Registro"
+          age={18}
+          email="ricardoestevam2704@gmail.com"
+        />
+        {/* Componente com desestruturação de props */}
+        <Pet name="Rex" breed="Pitbull" age={3} />
+        <br />
+        <Counter />
+        <br />
+        <UserForm />
+        <br />
+        <br />
+        <ComponentePai />
+        <br />
+        <br />
+        <Children>
+          <div>
+            <p>Este é o conteúdo da children</p>
+          </div>
+        </Children>
+        <br />
+        <br />
+        <TaskList 
+          tasks={[
+            {
+              id: "1",
+              text: "Pagar Contas"
+            },
+               {
+              id: "2",
+              text: "Fazer Compras"
+            },
+               {
+              id: "3",
+              text: "Lavar Carro"
+            },
+               {
+              id: "4",
+              text: "Estudar React"
+            }
+          ]}
+        
+        />
+        <br />
+        <br />
       </main>
-      
     </>
   );
 }
